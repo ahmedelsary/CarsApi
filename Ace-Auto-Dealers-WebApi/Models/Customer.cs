@@ -10,13 +10,18 @@ namespace Ace_Auto_Dealers_WebApi.Models
         [key]
         public int Id { get; set; }
         public string CustomerName { get; set; }
+        public string SalesRepresentativeId { get; set; }
+        public string SalesRepresentativeName { get; set; }
         public string? Address { get; set; }
         public string? Telephone { get; set; }
         public DateTime DateofVisit { get; set; }
+        public string VehicleModel { get; set; }
+        public string HeardFrom { get; set; }
+        public bool? Purchase { get; set; }
+      
 
-        model of the vehicle
-            where the customer heard
-            purchase
+
+
 
 
     }

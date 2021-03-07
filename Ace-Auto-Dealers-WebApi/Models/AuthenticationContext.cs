@@ -15,5 +15,6 @@ namespace Ace_Auto_Dealers_WebApi.Models
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
