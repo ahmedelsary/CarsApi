@@ -50,8 +50,8 @@ namespace Ace_Auto_Dealers_WebApi.Migrations
                     b.Property<string>("Telephone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("VehicleModel")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("VehicleModel")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

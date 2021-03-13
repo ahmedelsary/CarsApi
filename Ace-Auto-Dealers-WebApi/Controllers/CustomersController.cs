@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Ace_Auto_Dealers_WebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ace_Auto_Dealers_WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class CustomersController : ControllerBase
     {
         private readonly AuthenticationContext _context;
@@ -26,6 +28,16 @@ namespace Ace_Auto_Dealers_WebApi.Controllers
         {
             return await _context.Customers.ToListAsync();
         }
+
+        [HttpGet("CustomersByUID/{userId}")]
+        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomersByUID(string userId)
+        {
+
+            return _context.Customers
+                .Where(x => x.SalesRepresentativeId == userId)
+               .Select(c => c).ToList();
+        }
+
 
         // GET: api/Customers/5
         [HttpGet("{id}")]
@@ -97,6 +109,31 @@ namespace Ace_Auto_Dealers_WebApi.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        [HttpPut("CustomersPurchase")]
+        // PUT: api/Customers/CustomersPurchase
+        public async Task<IActionResult> CustomersPurchase(List<Customer> customers)
+        {
+            foreach (var customer in customers)
+            {
+                _context.Entry(customer).State = EntityState.Modified;
+
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                   
+                    throw;
+                    
+                }
+
+            }
+
+            return NoContent();
+
         }
 
         private bool CustomerExists(int id)

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cars\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj": {}
+    "E:\\CarsApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Cars\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj": {
+    "E:\\CarsApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cars\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj",
+        "projectUniqueName": "E:\\CarsApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj",
         "projectName": "Ace-Auto-Dealers-WebApi",
-        "projectPath": "D:\\Cars\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj",
-        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-        "outputPath": "D:\\Cars\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi\\obj\\",
+        "projectPath": "E:\\CarsApi\\Ace-Auto-Dealers-WebApi\\Ace-Auto-Dealers-WebApi.csproj",
+        "packagesPath": "C:\\Users\\Ahmed\\.nuget\\packages\\",
+        "outputPath": "E:\\CarsApi\\Ace-Auto-Dealers-WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "E:\\local nugetpackage": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -100,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

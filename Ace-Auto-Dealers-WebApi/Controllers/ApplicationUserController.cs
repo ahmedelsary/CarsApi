@@ -96,6 +96,7 @@ namespace Ace_Auto_Dealers_WebApi.Controllers
             var claims = await _userManager.GetClaimsAsync(user);
             return new
             {
+                user.Id,
                 user.FullName,
                 user.Email,
                 user.UserName,
